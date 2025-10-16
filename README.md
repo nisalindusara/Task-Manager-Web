@@ -1,8 +1,8 @@
-#Task Manager
+# Task Manager
 
 A clean, minimalist task management application built with vanilla JavaScript, HTML, and CSS. This project serves as a foundation for a fully-featured task manager with an intuitive interface and smooth user experience.
 
-##urrent Features
+## Current Features
 
 Add Tasks: Quickly add new task cards with sequential numbering
 
@@ -14,7 +14,7 @@ Responsive Design: Works across different screen sizes
 
 Modern UI: Clean, card-based interface with gradient background
 
-##Planned Features
+## Planned Features
 
 This is an evolving project. Future updates will include:
 
@@ -36,7 +36,7 @@ Search and filter capabilities
 
 Enhanced mobile experience
 
-##Technologies Used
+## Technologies Used
 
 HTML5 - Structure
 
