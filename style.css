@@ -1,0 +1,167 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #8b9eb7 0%, #a8b8c9 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .parent-container {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            margin-left: 100px;
+        }
+
+        .action-buttons {
+            position: fixed;
+            top: 40%; 
+            left: 20px;  
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 1000;  
+        }
+
+        .action-btn {
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            background: #6b7c92;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .action-btn:hover {
+            background: #5a6a7e;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .action-btn:active {
+            transform: translateY(0);
+        }
+
+        #tasks-list {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .task-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px 35px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            transition: transform 0.2s ease;
+        }
+
+        .task-card:hover {
+            transform: translateX(5px);
+        }
+
+        .task-number {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .task-label {
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .task-num {
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .task-content {
+            font-size: 18px;
+            color: #333;
+            flex: 1;
+        }
+
+        /* Trash bin icon */
+        .trash-icon {
+            position: relative;
+            width: 24px;
+            height: 28px;
+        }
+
+        .trash-icon::before {
+            content: '';
+            position: absolute;
+            width: 24px;
+            height: 20px;
+            background: white;
+            border: 2px solid white;
+            border-radius: 0 0 3px 3px;
+            bottom: 0;
+        }
+
+        .trash-icon::after {
+            content: '';
+            position: absolute;
+            width: 28px;
+            height: 4px;
+            background: white;
+            border-radius: 2px;
+            top: 4px;
+            left: -2px;
+        }
+
+        .trash-lid {
+            position: absolute;
+            width: 16px;
+            height: 3px;
+            background: white;
+            top: 0;
+            left: 4px;
+            border-radius: 2px 2px 0 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .action-buttons {
+                flex-direction: row;
+            }
+
+            .task-card {
+                padding: 20px 25px;
+            }
+
+            .task-num {
+                font-size: 36px;
+            }
+
+            .task-content {
+                font-size: 16px;
+            }
+        }
